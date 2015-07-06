@@ -1,0 +1,96 @@
+/* Mixins */
+@mixin transform($val) {
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -ms-transform: $val;
+    transform: $val;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+/* Mixins */
+
+#home {
+    .thumbCar {
+        width: 155px;
+        height: 90px;
+        float: right;
+        max-width: 100%;
+    }
+    .list-cars:hover {
+        @include transform(scale(1.05));
+    }
+}
+#confirmDelete{
+    button{
+        margin-right: 8px;
+    }
+}
+#compare{    
+    .selected {
+        display: none;
+        color: red;
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+    body {
+        background-color: #FF9664;
+    }
+    #details {
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+    #home{
+        .thumbCar{
+            float:none;
+        }
+    }
+    #compare{
+        input{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    body {
+        background-color: #FFFFA6;
+    }
+    #details {
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    body {
+        background-color: #82FFC0;
+    }
+    #details img {
+        max-width: 100%;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    body {
+        background-color: #359AFF;
+    }
+}

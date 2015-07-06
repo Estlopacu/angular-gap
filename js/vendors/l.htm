@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:8080/angularGap/#/ -->
+<html class="no-js ng-scope" lang="en" ng-app="MyCars"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>title</title>
+ 		<link rel="stylesheet" href="http://localhost:8080/angularGap/css/bootstrap.min.css">
+ 		<link rel="stylesheet" href="http://localhost:8080/angularGap/css/style.css">
+        <!--[if lt IE 9]> HTML5Shiv
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+ 
+    <script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script></head>
+    <body screen_capture_injected="true">
+	
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="http://localhost:8080/angularGap/#">MyCars</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="http://localhost:8080/angularGap/#">Principal</a></li>
+	        <li><a href="http://localhost:8080/angularGap/#">Comparativa</a></li>
+	        <li><a href="http://localhost:8080/angularGap/#">Administración</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- ngView:  --><div class="container-fluid ng-scope" ng-view=""><div id="home" class="ng-scope">
+    <div class="jumbotron">
+        <h1>Bienvenido</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12 alert alert-info">
+            <form class="form-inline ng-pristine ng-valid">
+                <div class="form-group">
+                    <label>Search by Brand</label>
+                    <input type="text" class="form-control ng-pristine ng-valid" placeholder="Brand" ng-model="searchFilter">
+                	<button type="submit" class="btn btn-default">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <ul class="list-group">
+                <!-- ngRepeat: car in cars | filter:{ brand: searchFilter} --><li class="list-group-item list-cars ng-scope" ng-repeat="car in cars | filter:{ brand: searchFilter}">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <h4 class="list-group-item-heading ng-binding">2000
+                                <br>Hyundai Accent</h4>
+                            <p class="list-group-item-text">Color
+                                <span class="colorViewer" style="background-color:Red;">&nbsp;&nbsp;</span>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="thumbCar" ng-src="http://www.autos.ca/roadtest/images/00accent_gsi1.jpg" alt="" src="./l_files/00accent_gsi1.jpg">
+                        </div>
+                    </div>
+                </li><!-- end ngRepeat: car in cars | filter:{ brand: searchFilter} --><li class="list-group-item list-cars ng-scope" ng-repeat="car in cars | filter:{ brand: searchFilter}">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <h4 class="list-group-item-heading ng-binding">2004
+                                <br>Mitsubishi Lancer</h4>
+                            <p class="list-group-item-text">Color
+                                <span class="colorViewer" style="background-color:Gray;">&nbsp;&nbsp;</span>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="thumbCar" ng-src="http://upload.wikimedia.org/wikipedia/commons/8/83/2004-05_Mitsubishi_Lancer.jpg" alt="" src="./l_files/2004-05_Mitsubishi_Lancer.jpg">
+                        </div>
+                    </div>
+                </li><!-- end ngRepeat: car in cars | filter:{ brand: searchFilter} --><li class="list-group-item list-cars ng-scope" ng-repeat="car in cars | filter:{ brand: searchFilter}">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <h4 class="list-group-item-heading ng-binding">1994
+                                <br>Mitsubishi Mirage</h4>
+                            <p class="list-group-item-text">Color
+                                <span class="colorViewer" style="background-color:Blue;">&nbsp;&nbsp;</span>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="thumbCar" ng-src="http://carphotos.cardomain.com/ride_images/2/3728/3401/21819200002_large.jpg?v=0" alt="" src="./l_files/21819200002_large.jpg">
+                        </div>
+                    </div>
+                </li><!-- end ngRepeat: car in cars | filter:{ brand: searchFilter} --><li class="list-group-item list-cars ng-scope" ng-repeat="car in cars | filter:{ brand: searchFilter}">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <h4 class="list-group-item-heading ng-binding">1989
+                                <br>Hyundai Elantra</h4>
+                            <p class="list-group-item-text">Color
+                                <span class="colorViewer" style="background-color:Gray;">&nbsp;&nbsp;</span>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="thumbCar" ng-src="http://3.bp.blogspot.com/-uPNADGMQqzk/T6QpmNZ6a5I/AAAAAAAAAQ8/9ozMgzpNdT4/s1600/Hyundai+Excel+1989.jpg" alt="" src="./l_files/Hyundai+Excel+1989.jpg">
+                        </div>
+                    </div>
+                </li><!-- end ngRepeat: car in cars | filter:{ brand: searchFilter} --><li class="list-group-item list-cars ng-scope" ng-repeat="car in cars | filter:{ brand: searchFilter}">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <h4 class="list-group-item-heading ng-binding">2012
+                                <br>Hyundai Elantra</h4>
+                            <p class="list-group-item-text">Color
+                                <span class="colorViewer" style="background-color:Yellow;">&nbsp;&nbsp;</span>
+                            </p>
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="thumbCar" ng-src="http://imagizer.imageshack.us/a/img28/1148/lst8.jpg" alt="" src="./l_files/lst8.jpg">
+                        </div>
+                    </div>
+                </li><!-- end ngRepeat: car in cars | filter:{ brand: searchFilter} -->
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+	<!-- Vendors-->
+	<script src="./l_files/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="./l_files/bootstrap.min.js" type="text/javascript"></script>
+	<script src="./l_files/angular.min.js" type="text/javascript"></script>
+	<script src="./l_files/angular-route.min.js" type="text/javascript"></script>
+	<!-- Vendors-->
+	<!-- Own Js's -->
+	<script src="./l_files/app.js" type="text/javascript"></script>
+	<script src="./l_files/services.js" type="text/javascript"></script>
+	<script src="./l_files/controller.js" type="text/javascript"></script>
+    
+</body></html>

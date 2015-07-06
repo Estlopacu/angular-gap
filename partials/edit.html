@@ -1,0 +1,45 @@
+<div id="addNew">
+    <div class="jumbotron">
+        <h1>Admin</h1>
+    </div>
+    <div class="row " id="confirmDelete">
+        <div class="jumbotron col-md-4 col-md-offset-4">
+            <a href="#/admin" title="">Back</a>
+            <form role="form">
+                <div class="form-group">
+                    <p>Edit car {{car.year}} {{car.brand}} {{car.model}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Brand</label>
+                    <input type="text" class="form-control" ng-model="brand" required>
+                </div>
+                <div class="form-group">
+                    <label>Model</label>
+                    <input type="text" class="form-control" ng-model="model" required>
+                </div>
+                <div class="form-group">
+                    <label>Year</label>
+                    <input type="number" min="1970" max="2015" class="form-control" ng-model="year" required>
+                </div>
+                <div class="form-group">
+                    <label>Color</label>
+                    <input type="text" class="form-control" ng-model="color" required>
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" ng-model="price" required>
+                </div>
+                <div class="form-group">
+                    <label>Image Url</label>
+                    <input type="url" class="form-control" ng-model="imgUrl" required>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-mode="deal" class="check">Deal
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="edit()">Save</button>
+            </form>
+        </div>
+    </div>
+</div>

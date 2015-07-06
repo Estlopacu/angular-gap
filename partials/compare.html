@@ -1,0 +1,35 @@
+<div id="compare">
+    <div class="jumbotron">
+        <h1>Compare</h1>
+        <p>Please select 3 cars for compare by selection the compare option, then select the compare button.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form class="form-inline well">
+                <div class="form-group">
+                    <label>Search by Brand</label>
+                    <input type="text" class="form-control" placeholder="Brand" ng-model="searchFilter">
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-default">Search</button>
+                        <button  class="btn btn-default" ng-click="compare()">Compare</button>
+                    </div>
+                </div>
+            </form>
+            <ul class="list-group">
+                <li class="list-group-item list-cars" ng-repeat="car in cars | filter:{ brand: searchFilter}" data-toggle="{{car.deal == 1 | iif: 'tooltip': ''}}" title="{{car.deal == 1 | iif: 'Todays Deal!!': ''}}" data-carid="{{car.id}}">
+                    <div class="row">
+                        <div class="col-xs-8 groupCar">
+                            <h4 class="list-group-item-heading">{{ car.year }} {{ car.brand }} {{ car.model }}</h4>
+                        </div>
+                        <div class="col-xs-4">
+                            <label>Compare</label>
+                            <input type="checkbox" name="" value="" class="compareSelected">
+                            <span class="selected"><i>Selected!!!</i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

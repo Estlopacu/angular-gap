@@ -1,0 +1,30 @@
+<div id="admin">
+    <div class="jumbotron">
+        <h1>Admin</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form class="form-inline well">
+                <div class="form-group">
+                    <label>Search by Brand</label>
+                    <input type="text" class="form-control" placeholder="Brand" ng-model="searchFilter">
+                    <button type="submit" class="btn btn-default">Search</button>
+                    <button type="submit" class="btn btn-default" ng-click="addNew()">Add new</button>
+                </div>
+            </form>
+            <ul class="list-group">
+                <li class="list-group-item list-cars" ng-repeat="car in cars | filter:{ brand: searchFilter}">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="list-group-item-heading">{{ car.year }} {{ car.brand }} {{ car.model }}</h4>
+                            <p>
+                                <a href="#/edit/{{ car.id }}">Edit ></a>
+                                <a href="#/delete/{{ car.id }}/{{car.year +' '+ car.brand +' '+ car.model}}">Delete ></a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
